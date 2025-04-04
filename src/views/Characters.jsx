@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import CharCards from '../components/CharCards';
 
 function Characters() {
   const [characters, setCharacters] = useState([
@@ -33,12 +34,14 @@ function Characters() {
         const {fullName, nickname,hogwartsHouse,interpretedBy,image,birthdate, } = charObj;
         return (
           <div key={i}>
-            <img src={image} alt="Character Images" />
-            <h1>fullName : {fullName}</h1>
-            <p>nickname : {nickname}</p>
-            <p>hogwartsHouse : {hogwartsHouse}</p>
-            <p>interpretedBy : {interpretedBy}</p>
-            <p>birthdate : {birthdate}</p>
+           <CharCards
+           image={image}
+           fullName={fullName}
+           nickname={nickname}
+           hogwartsHouse={hogwartsHouse}
+           interpretedBy={interpretedBy}
+           birthdate={birthdate}
+           />
           </div>
         )
       })}
