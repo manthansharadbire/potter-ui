@@ -10,11 +10,11 @@ import { BrowserRouter, Route, Routes } from "react-router";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={Homepage} />
-      <Route path="/characters" element={Characters} />
-      <Route path="/spells" element={Spells} />
-      <Route path="/houses" element={Houses} />
-      <Route path="/books" element={Books} />
+      <Route path="/" element={<Homepage/>} />
+      <Route path="/characters" element={<Characters/>} />
+      <Route path="/spells" element={<Spells/>} />
+      <Route path="/houses" element={<Houses/>} />
+      <Route path="/books" element={<Books/>} />
     </Routes>
   </BrowserRouter>
 );
