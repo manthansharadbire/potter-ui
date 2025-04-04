@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import HouseCards from "../components/HouseCards";
 
 function Houses() {
 
@@ -32,11 +33,13 @@ return (
       const { house, emoji, colors, founder, animal } = houseObj;
       return (
         <div key={i}>
-          <h1>house : {house}</h1>
-          <p>animal : {animal}</p>
-          <p>emoji : {emoji}</p>
-          <p>founder : {founder}</p>
-          <p>colors : {colors}</p>
+         <HouseCards
+         emoji={emoji}
+         house={house}
+         animal={animal}
+         founder={founder}
+         colors={colors}
+         />
         </div>
       );
     })}

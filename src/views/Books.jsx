@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import BookCards from "../components/BookCards";
 
 function Books() {
 
@@ -33,11 +34,13 @@ return (
       const { title, releaseDate, description, pages, cover } = bookObj;
       return (
         <div key={i}>
-          <img src={cover} alt="Harry Potter Books" />
-          <h1>title : {title}</h1>
-          <p>releaseDate : {releaseDate}</p>
-          <p>pages : {pages}</p>
-          <p>description : {description}</p>
+         <BookCards
+         cover={cover}
+         title={title}
+         releaseDate={releaseDate}
+         pages={pages}
+         description={description}
+         />
         </div>
       );
     })}

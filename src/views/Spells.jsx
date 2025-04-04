@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import SpellCards from './../components/SpellCards'
 
 function Spells() {
   const [spells, setSpells] = useState([
@@ -22,8 +23,9 @@ function Spells() {
         return (
           <div key={i}>
            
-            <p>spell : {spell}</p>
-            <p>use : {use}</p>
+           <SpellCards 
+           use = {use}
+           spell = {spell}/>
           </div>
         )
       })}
