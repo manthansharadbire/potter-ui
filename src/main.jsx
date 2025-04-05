@@ -6,8 +6,11 @@ import Spells from "./views/Spells.jsx";
 import Houses from "./views/Houses.jsx";
 import Books from "./views/Books.jsx";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { StrictMode } from "react";
+
 
 createRoot(document.getElementById("root")).render(
+    <StrictMode>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Homepage/>} />
@@ -17,4 +20,5 @@ createRoot(document.getElementById("root")).render(
       <Route path="/books" element={<Books/>} />
     </Routes>
   </BrowserRouter>
+  </StrictMode>
 );
