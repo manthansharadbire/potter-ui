@@ -2,7 +2,7 @@ import React from 'react'
 
 function HouseCards( {house, emoji, colors, founder, animal}) {
   return (
-    <div>
+    <div className='text-white m-6'>
       <img src={emoji} alt="House Image" />
       <h1>house={house}</h1>
       <p>animal={animal}</p>
